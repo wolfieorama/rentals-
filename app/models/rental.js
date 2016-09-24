@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-// const { attr } = DS;
+// const { attr } = DS; deconstructing attr
 
 export default DS.Model.extend({
   title: DS.attr(),
