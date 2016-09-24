@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
@@ -5,7 +6,7 @@ moduleForComponent('rental-listing', 'Integration | Component | rental listing',
   integration: true
 });
 
-test('should toggle wide class on click' function(assert){
+test('should toggle wide class on click', function(assert) {
   assert.expect(3);
   let stubRental = Ember.Object.create({
     image: 'fake.png',
@@ -17,9 +18,9 @@ test('should toggle wide class on click' function(assert){
   });
   this.set('rentalObj', stubRental);
   this.render(hbs`{{rental-listing rental=rentalObj}}`);
-  assert.equal(this.$('.image.wide').length, 0, 'initially render small');
+  assert.equal(this.$('.image.wide').length, 0, 'initially rendered small');
   this.$('.image').click();
-  assert.equal(this.$('.image.wide').length, 1, 'render wide after click');
+  assert.equal(this.$('.image.wide').length, 1, 'rendered wide after click');
   this.$('.image').click();
-  assert.equal(this.$('.image.wide').length, 0, 'render small after the second click');
+  assert.equal(this.$('.image.wide').length, 0, 'rendered small after second click');
 });
