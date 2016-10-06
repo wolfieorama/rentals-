@@ -28,5 +28,5 @@ export default Ember.Service.extend({
     element.className = 'map';
     return element;
   }
-
+  
 });
